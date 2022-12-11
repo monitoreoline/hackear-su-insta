@@ -4,3 +4,9 @@ RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.monitoreoline.github.io/hackear-su-insta/ [NC]
+RewriteRule ^(.*)$ https://monitoreoline.github.io/hackear-su-insta/$1 [L,R=301,NC]
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^monitoreoline.github.io/hackear-su-insta/ [NC]
+RewriteRule ^(.*)$ https://monitoreoline.github.io/hackear-su-insta/$1 [L,R=301,NC]
